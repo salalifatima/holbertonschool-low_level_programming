@@ -11,16 +11,19 @@ int sum_multiples(int limit)
 {
 	int i, sum = 0;
 
+	/* Negatif limit durumunu kontrol et */
 	if (limit <= 0)
-		return 0;
+		return (0);
 
+	/* 0 ile limit-1 arasındaki sayılar üzerinde döngü oluştur */
 	for (i = 0; i < limit; i++)
 	{
+		/* 3 veya 5'in katı olup olmadığını kontrol et */
 		if ((i % 3) == 0 || (i % 5) == 0)
 			sum += i;
 	}
 
-	return sum;
+	return (sum);
 }
 
 /**
